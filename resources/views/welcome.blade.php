@@ -8,6 +8,7 @@
 @section('scripts')
     @parent
 
+
     <script type="text/javascript">
         var AppBridge = window['app-bridge'];
         var actions = AppBridge.actions;
