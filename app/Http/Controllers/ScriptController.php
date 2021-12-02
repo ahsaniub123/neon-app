@@ -479,7 +479,7 @@ class ScriptController extends Controller
             "quantity" => 1,
             "properties" => [
                 [
-                    'name' => 'Wall Text(8)',
+                    'name' => 'Wall Text',
                     'value' => $request->properties['wall_text'],
                 ],
                 [
