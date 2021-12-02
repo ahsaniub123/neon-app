@@ -439,7 +439,6 @@ class ScriptController extends Controller
         $textLength = strlen($text);
 //        $board = BoardSize::where('length', $request->properties['length'])->where('width', $request->properties['width'])->where('font_type', $font->type)->where('letter', $textLength)->first();
 
-        dd($request->all());
         $customizationCharges = $request->properties['board_price'] + $indoor + $outdoor;
         if ($request->indoor != null) {
             $doortitle = 'Indoor Sign';
