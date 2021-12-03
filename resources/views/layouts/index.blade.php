@@ -26,9 +26,9 @@
         <li class="nav-item">
             <a class="nav-link text-white" href="{{ route('board.font.all') }}">Fonts</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="{{ route('board.options') }}">Options</a>
-        </li>
+{{--        <li class="nav-item">--}}
+{{--            <a class="nav-link text-white" href="{{ route('board.options') }}">Options</a>--}}
+{{--        </li>--}}
         <li class="nav-item">
             <a class="nav-link text-white" href="{{ route('boards') }}">Boards</a>
         </li>
