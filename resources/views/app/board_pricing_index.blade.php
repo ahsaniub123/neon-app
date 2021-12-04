@@ -14,10 +14,10 @@
         }
     </style>
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <h3>Board Pricings</h3>
         </div>
-        <div class="col-6 text-right">
+        <div class="col-8 text-right">
             <a  class="btn btn-primary" href="{{route('bulk_board_pricing.edit')}}">Edit Bulk Board Pricing</a>
             <a  class="btn btn-primary" href="{{route('bulk_board_pricing.new')}}">Add Bulk Board Pricing</a>
             <button type="button" class="btn btn-primary" data-toggle="modal"

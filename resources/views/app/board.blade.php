@@ -5,7 +5,6 @@
             <h3>Board Pricing</h3>
         </div>
         <div class="col-6 text-right">
-
             <a class="btn btn-primary" href="{{ route('board.pricing.new') }}">Add Board</a>
         </div>
     </div>
