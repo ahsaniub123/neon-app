@@ -14,6 +14,7 @@
         }
     </style>
     <div class="row">
+
         <div class="col-4">
             <h3>Board Pricings</h3>
         </div>
