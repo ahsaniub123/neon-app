@@ -372,7 +372,6 @@ class ScriptController extends Controller
 
     public function order(Request $request)
     {
-
         if ($request->indoor != null) {
             $indoor = $request->indoor;
         } else {
@@ -583,7 +582,7 @@ class ScriptController extends Controller
         $saveDesign->slug = $slug;
         $saveDesign->save();
 //        Place Order on Shopify Store
-        $response = $this->getShopify('neon-nerd-co.myshopify.com')->rest('POST', '/admin/draft_orders.json',
+        $response = $this->getShopify('neons-co.myshopify.com')->rest('POST', '/admin/draft_orders.json',
             [
                 "draft_order" => [
                     "financial_status" => "pending",
