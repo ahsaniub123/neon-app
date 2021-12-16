@@ -372,6 +372,7 @@ class ScriptController extends Controller
 
     public function order(Request $request)
     {
+        dd($request->all());
         if ($request->indoor != null) {
             $indoor = $request->indoor;
         } else {
@@ -589,7 +590,7 @@ class ScriptController extends Controller
                     "line_items" => $items,
                     "note" => "https://mycustomled.com/pages/design-custom-led-sign?type=" . $slug
                 ]
-            ]);
+            ]   );
         $url = $response['body']->container['draft_order']['invoice_url'];
         return response()->json([
             'status' => 'success',
