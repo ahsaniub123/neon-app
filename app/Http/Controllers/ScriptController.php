@@ -470,6 +470,37 @@ class ScriptController extends Controller
             $power_adapter = 'JAPAN 100V';
         }
 
+        if (isset($request->tubecolor)) {
+            $tubecolor = $request->tubecolor;
+        } else {
+            $tubecolor = 'NO';
+        }
+
+        if (isset($request->multicolor)) {
+            $multicolor = $request->multicolor;
+        } else {
+            $multicolor = 'NO';
+        }
+        if (isset($request->waterproof)) {
+            $waterproof = $request->waterproof;
+        } else {
+            $waterproof = 'NO';
+        }
+        if (isset($request->deliverytime)) {
+            $deliverytime = $request->deliverytime;
+        } else {
+            $deliverytime = 'NO';
+        }
+        if (isset($request->framecut)) {
+            $framecut = $request->framecut;
+        } else {
+            $framecut = 'NO';
+        }
+        if (isset($request->plugtype)) {
+            $plugtype = $request->plugtype;
+        } else {
+            $plugtype = 'NO';
+        }
 //        $wall = BoardSize::where('length', $request->properties['length'])->where('width', $request->properties['width'])->first();
         //Making Array of Customization
         $items = [];
@@ -495,20 +526,28 @@ class ScriptController extends Controller
                     'value' => $request->properties['board_size'] . ' (' . $request->properties['length'] . '*' . $request->properties['width'] . ')',
                 ],
                 [
-                    'name' => 'Backing Shape',
-                    'value' => $request->properties['Shape'],
+                    'name' => 'Tube Color',
+                    'value' => $tubecolor,
                 ],
                 [
-                    'name' => 'Power Supply',
-                    'value' => $request->properties['Supply'],
+                    'name' => 'Multi Color',
+                    'value' => $multicolor,
                 ],
                 [
-                    'name' => 'Power Adapter',
-                    'value' => $power_adapter,
+                    'name' => 'Water Proof',
+                    'value' => $waterproof,
                 ],
                 [
-                    'name' => $doortitle,
-                    'value' => $doorprice,
+                    'name' => 'Delivery Time',
+                    'value' => $deliverytime,
+                ],
+                [
+                    'name' => 'Frame Cut',
+                    'value' => $framecut,
+                ],
+                [
+                    'name' => 'Plug Type',
+                    'value' => $plugtype,
                 ],
                 [
                     'name' => 'Board Price',
