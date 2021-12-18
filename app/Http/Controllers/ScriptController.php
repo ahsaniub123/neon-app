@@ -371,7 +371,6 @@ class ScriptController extends Controller
 
     public function order(Request $request)
     {
-        dd($request->all());
         if ($request->indoor != null) {
             $indoor = $request->indoor;
         } else {
