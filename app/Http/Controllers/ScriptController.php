@@ -253,7 +253,6 @@ class ScriptController extends Controller
 
     public function cartOrder(Request $request)
     {
-//        dd($request->all());
         $cart = json_decode($request->cart);
         $customizationCharges = 0;
         foreach ($cart->items as $item) {
