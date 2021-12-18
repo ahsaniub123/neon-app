@@ -90,6 +90,7 @@ class ScriptController extends Controller
         } else {
             $board = null;
         }
+
         return response()->json([
             'status' => 'success',
             'text' => $wall_text,
