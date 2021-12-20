@@ -181,7 +181,7 @@ class ScriptController extends Controller
     public function availableBoard(Request $request)
     {
         dd($request->all());
-        $board_price = $request->b_price;
+        $board_price = $request->for_board_price;
         $font = null;
         if (isset($request->slug)) {
             $savedDesign = SaveDesign::where('slug', $request->slug)->first();
