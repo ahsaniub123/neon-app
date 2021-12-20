@@ -37,7 +37,7 @@
                             @csrf
                             <div class="modal-body" style="text-align: left;">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <div class="form-group">
                                             <label>Character Count</label>
                                             <div class="input-group mb-3">
@@ -45,14 +45,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Pricing</label>
-                                            <div class="input-group mb-3">
-                                                <input type="number"  step="any" name="pricing" class="form-control" required>
-                                            </div>
-                                        </div>
-                                    </div>
+{{--                                    <div class="col-6">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label>Pricing</label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input type="number"  step="any" name="pricing" class="form-control" required>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
 
                                 <div class="row">

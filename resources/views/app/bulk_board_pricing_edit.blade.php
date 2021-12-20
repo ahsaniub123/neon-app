@@ -37,7 +37,7 @@
                                     <div class="col-md-3">Character Count</div>
                                     <div class="col-md-3">Board</div>
                                     <div class="col-md-3">Font Groups</div>
-                                    <div class="col-md-3">Pricing</div>
+{{--                                    <div class="col-md-3">Pricing</div>--}}
                                 </div>
                             </td>
                         </tr>
@@ -77,9 +77,9 @@
                                                 @endif
                                             </select>
                                         </div>
-                                        <div class="align-middle col-md-3">
-                                            <input type="number" @if(isset($board_pricing->pricing)) value="{{$board_pricing->pricing}}" @endif step="any" name="pricing" class="form-control price" required>
-                                        </div>
+{{--                                        <div class="align-middle col-md-3">--}}
+{{--                                            <input type="number" @if(isset($board_pricing->pricing)) value="{{$board_pricing->pricing}}" @endif step="any" name="pricing" class="form-control price" required>--}}
+{{--                                        </div>--}}
                                     </form>
                                 </td>
                             </tr>

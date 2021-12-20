@@ -52,7 +52,7 @@
                         <th scope="col" style="width: 15%;">Font Type</th>
                         <th scope="col" style="width: 15%;">Letters</th>
                         <th scope="col" style="width: 15%;">Predicted Length</th>
-                        <th scope="col" style="width: 15%;">Price</th>
+{{--                        <th scope="col" style="width: 15%;">Price</th>--}}
                         <th scope="col" style="width: 10%;"></th>
                     </tr>
                     </thead>
@@ -68,8 +68,8 @@
                             </td>
                             <td>{{ $board->letter }}</td>
                             <td>{{ $board->predicted_length }} cm</td>
-                            <td>£
-                            {{ $board->price }}</td>
+{{--                            <td>£--}}
+{{--                            {{ $board->price }}</td>--}}
                             <td class="text-right">
                                 <div class="btn-group btn-group-sm">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
