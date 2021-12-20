@@ -87,7 +87,6 @@
                 <div style="display: flex;">
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
-
             @else
                 £{{$b_price * ($i + 1)}}
             @endif
