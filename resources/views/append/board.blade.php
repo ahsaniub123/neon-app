@@ -79,7 +79,7 @@
     <div @if(isset($font_disable) && $font_disable == true) data-disable="yes" @else data-disable="not" @endif
         class="board @if($board_width != null && $board_length != null) @if($board_width == $board->width && $board_length == $board->length) active @endif @endif"
         data-length="{{$total_max_char_length_count}}" data-boardSize="{{$board->title}}" data-width="{{$total_max_char_height_count}}"
-        data-price="{{$pricing}}">
+        data-price="{{$b_price * ($i + 1)}}">
         <div class="board_price"
              @if(isset($font_disable) && $font_disable == true) style=" width: auto !important;" @else @endif>
             {{ $board->title }}<br>
