@@ -180,6 +180,7 @@ class ScriptController extends Controller
 
     public function availableBoard(Request $request)
     {
+        dd($request->all());
         $board_price = $request->b_price;
         $font = null;
         if (isset($request->slug)) {
