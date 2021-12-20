@@ -180,6 +180,7 @@ class ScriptController extends Controller
 
     public function availableBoard(Request $request)
     {
+        $board_price = $request->b_price;
         $font = null;
         if (isset($request->slug)) {
             $savedDesign = SaveDesign::where('slug', $request->slug)->first();
@@ -202,7 +203,8 @@ class ScriptController extends Controller
                     'board_width' => $board_width,
                     'text' => $text,
                     'textLength' => $textLength,
-                    'font' => $font
+                    'font' => $font,
+                    'b_price'=>$board_price,
                 ])->render();
             } else {
                 $board = '<p>“Too many letters for this font! (Max 50)”</p>';
