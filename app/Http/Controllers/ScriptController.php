@@ -20,6 +20,7 @@ class ScriptController extends Controller
 {
     public function index(Request $request)
     {
+        $b_price = $request->b_price;
         $font= null;
         $text= null;
         if (isset($request->slug)) {
@@ -86,6 +87,7 @@ class ScriptController extends Controller
                 'textLength' => $textLength,
                 'font' => $font,
                 'text' => $text,
+                'b_price'=>$b_price,
             ])->render();
         } else {
             $board = null;
