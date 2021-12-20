@@ -89,7 +89,7 @@
                 </div>
 
             @else
-                £{{$pricing}}
+                £234
             @endif
 
         </div>
