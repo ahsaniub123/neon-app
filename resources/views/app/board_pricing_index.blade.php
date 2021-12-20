@@ -136,7 +136,7 @@
                     <th scope="col" style="width: 13%;">Character Counts</th>
                     <th scope="col" style="width: 13%;">Board</th>
                     <th scope="col" style="width: 13%;">Font Group</th>
-                    <th scope="col" style="width: 13%;">Pricing</th>
+{{--                    <th scope="col" style="width: 13%;">Pricing</th>--}}
                     <th scope="col" style="width: 10%;">Actions</th>
                 </tr>
                 </thead>
@@ -159,7 +159,7 @@
                             <td>{{isset($board->title)?$board->title:'--'}}</td>
 
                             <td>{{ isset($font_group->title)?$font_group->title:'--'}}</td>
-                            <td>{{ $board_pricing->pricing }}</td>
+{{--                            <td>{{ $board_pricing->pricing }}</td>--}}
 
                             <td class="text-right">
                                 <div class="btn-group btn-group-sm">

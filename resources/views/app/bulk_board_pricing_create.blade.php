@@ -42,9 +42,9 @@
                             <td class="font-w600 font-size-sm">
                                 Font Groups
                             </td>
-                            <td class="font-w600 font-size-sm">
-                                Pricing
-                            </td>
+{{--                            <td class="font-w600 font-size-sm">--}}
+{{--                                Pricing--}}
+{{--                            </td>--}}
 
                             <td class="font-w600 font-size-sm">
                                 <div class="py-1">
@@ -85,9 +85,9 @@
                                     @endif
                                 </select>
                             </td>
-                            <td class="align-middle">
-                                <input type="number"  step="any" name="pricing[]" class="form-control" required>
-                            </td>
+{{--                            <td class="align-middle">--}}
+{{--                                <input type="number"  step="any" name="pricing[]" class="form-control" required>--}}
+{{--                            </td>--}}
 
                             <td class="align-middle">
                                 <div class="d-flex align-items-center justify-content-center ">
