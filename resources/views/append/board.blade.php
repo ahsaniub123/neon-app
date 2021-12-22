@@ -82,7 +82,9 @@
         data-price="{{$b_price * ($i + 1)}}">
         <div class="board_price"
              @if(isset($font_disable) && $font_disable == true) style=" width: auto !important;" @else @endif>
-            {{ $board->title }}<br>
+            {{ $board->title }}
+        </div>
+        <div class="board_dimension" style="float: right;">
             @if(isset($font_disable) && $font_disable == true)
                 <div style="display: flex;">
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
@@ -90,17 +92,16 @@
             @else
                 £{{$b_price * ($i + 1)}}
             @endif
-
         </div>
-        @if(isset($font_disable) && $font_disable == true)
-            <div class="board_dimension" style="display: none !important;">
+{{--        @if(isset($font_disable) && $font_disable == true)--}}
+{{--            <div class="board_dimension" style="display: none !important;">--}}
 
-            </div>
-        @else
-            <div class="board_dimension" style="float: right;">
-                Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm
-            </div>
-        @endif
+{{--            </div>--}}
+{{--        @else--}}
+{{--            <div class="board_dimension" style="float: right;">--}}
+{{--                Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm--}}
+{{--            </div>--}}
+{{--        @endif--}}
 
     </div>
 @endforeach
