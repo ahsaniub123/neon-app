@@ -97,7 +97,7 @@
             </div>
         @else
             <div class="board_dimension" style="float: right;">
-                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In
+                Length: {{ round(($total_max_char_length_count),2)}}In  <br> Width: {{ round(($total_max_char_height_count),2) }}In
             </div>
         @endif
     </div>
