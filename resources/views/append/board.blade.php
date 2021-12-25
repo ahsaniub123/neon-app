@@ -82,9 +82,7 @@
         data-price="{{$b_price * ($i + 1)}}">
         <div class="board_price"
              @if(isset($font_disable) && $font_disable == true) style=" width: auto !important;" @else @endif>
-            {{ $board->title }}
-        </div>
-        <div class="board_dimension" style="float: right;">
+            {{ $board->title }}<br>
             @if(isset($font_disable) && $font_disable == true)
                 <div style="display: flex;">
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
@@ -102,7 +100,6 @@
                 Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm
             </div>
         @endif
-
     </div>
 @endforeach
 <div class='board-bottom' style="padding: 1%;"><small>*The Height shown is a range. Sizes vary depending on choice of
@@ -110,3 +107,13 @@
 
 {{--Small--}}
 {{--Not Available For This Font--}}
+{{--<div data-disable="not" class="board " data-length="9" data-boardsize="Medium" data-width="6" data-price="101">--}}
+{{--    <div class="board_price">--}}
+{{--        Medium<br>--}}
+{{--        £101--}}
+{{--    </div>--}}
+{{--    <div class="board_dimension" style="float: right;">--}}
+{{--        Length: 9cm <br> Width: 6cm--}}
+{{--    </div>--}}
+
+{{--</div>--}}
