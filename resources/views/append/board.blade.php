@@ -93,15 +93,15 @@
                 £{{$b_price * ($i + 1)}}
             @endif
         </div>
-{{--        @if(isset($font_disable) && $font_disable == true)--}}
-{{--            <div class="board_dimension" style="display: none !important;">--}}
+        @if(isset($font_disable) && $font_disable == true)
+            <div class="board_dimension" style="display: none !important;">
 
-{{--            </div>--}}
-{{--        @else--}}
-{{--            <div class="board_dimension" style="float: right;">--}}
-{{--                Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm--}}
-{{--            </div>--}}
-{{--        @endif--}}
+            </div>
+        @else
+            <div class="board_dimension" style="float: right;">
+                Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm
+            </div>
+        @endif
 
     </div>
 @endforeach
