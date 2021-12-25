@@ -97,7 +97,7 @@
             </div>
         @else
             <div class="board_dimension" style="float: right;">
-                Length: {{ $total_max_char_length_count }}cm <br> Width: {{ $total_max_char_height_count }}cm
+                Length: {{ $total_max_char_length_count / 2.54}}Inch <br> Width: {{ $total_max_char_height_count / 2.54 }}Inch
             </div>
         @endif
     </div>
@@ -107,13 +107,4 @@
 
 {{--Small--}}
 {{--Not Available For This Font--}}
-{{--<div data-disable="not" class="board " data-length="9" data-boardsize="Medium" data-width="6" data-price="101">--}}
-{{--    <div class="board_price">--}}
-{{--        Medium<br>--}}
-{{--        £101--}}
-{{--    </div>--}}
-{{--    <div class="board_dimension" style="float: right;">--}}
-{{--        Length: 9cm <br> Width: 6cm--}}
-{{--    </div>--}}
 
-{{--</div>--}}
