@@ -63,7 +63,6 @@
             }
         }
 
-
         $font_disable = null;
             if($board->fonts()->count() && isset($font)){
                foreach ($board->fonts as $disable_font){
