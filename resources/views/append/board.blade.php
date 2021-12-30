@@ -91,15 +91,18 @@
                 £{{$b_price * ($i + 1)}}
             @endif
         </div>
-        @if(isset($font_disable) && $font_disable == true)
-            <div class="board_dimension" style="display: none !important;">
+{{--        @if(isset($font_disable) && $font_disable == true)--}}
+{{--            <div class="board_dimension" style="display: none !important;">--}}
 
-            </div>
-        @else
-            <div class="board_dimension" style="float: right;">
-                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In
-            </div>
-        @endif
+{{--            </div>--}}
+{{--        @else--}}
+{{--            <div class="board_dimension" style="float: right;">--}}
+{{--                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In--}}
+{{--                Length <br> {{$for_board_length * ($i + 1)}}In </div>--}}
+{{--        @endif--}}
+        <div class="board_dimension" style="float: right;">
+            {{--                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In--}}
+            Length <br> {{$for_board_length * ($i + 1)}}In </div>
     </div>
 @endforeach
 <div class='board-bottom' style="padding: 1%;"><small>*The Height shown is a range. Sizes vary depending on choice of
