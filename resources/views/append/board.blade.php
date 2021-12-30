@@ -87,7 +87,7 @@
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
             @else
-                £{{$b_price * ($i + 1)}}
+                ${{$b_price * ($i + 1)}}
             @endif
         </div>
 {{--        @if(isset($font_disable) && $font_disable == true)--}}
@@ -101,7 +101,7 @@
 {{--        @endif--}}
         <div class="board_dimension" style="float: right;">
             {{--                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In--}}
-            Length <br> {{$for_board_length * ($i + 1)}}In </div>
+            Length <br> {{$b_length * ($i + 1)}}In </div>
     </div>
 @endforeach
 <div class='board-bottom' style="padding: 1%;"><small>*The Height shown is a range. Sizes vary depending on choice of
