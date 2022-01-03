@@ -47,10 +47,12 @@ class FontFamilyController extends Controller
         $font->price = $request->price;
         $font->size = $request->size;
         $font->type = $request->type;
-        $file = $request->file('url');
-        $input['url'] = $file->getClientOriginalName();
-        $file->move(public_path('font_files_upload'),$file->getClientOriginalName());
-        $font->url = $input['url'];
+        if (filled($request->file('url'))){
+            $file = $request->file('url');
+            $input['url'] = $file->getClientOriginalName();
+            $file->move(public_path('font_files_upload'),$file->getClientOriginalName());
+            $font->url = $input['url'];
+        }
         $font->save();
         return redirect()->back()->with('success', 'Font Family Updated Successfully');
     }

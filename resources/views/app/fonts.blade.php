@@ -74,10 +74,10 @@
 {{--                                                        <input type="url" name="url" class="form-control" value="{{ $font->url }}" placeholder="https://fonts.googleapis.com/css2?family=Roboto&display=swap">--}}
 {{--                                                    </div>--}}
 
-                                                    <div class="form-control">
-                                                        <label>Upload Font File</label>
-                                                        <input required value="{{asset('font_files_upload/'.$font->url)}}" type="file" name="url" class="form-control" >
-                                                    </div>
+{{--                                                    <div class="form-control">--}}
+{{--                                                        <label>Upload Font File</label>--}}
+{{--                                                        <input required value="{{asset('font_files_upload/'.$font->url)}}" type="file" name="url" class="form-control" >--}}
+{{--                                                    </div>--}}
 
                                                     <div class="row">
 {{--                                                        <div class="col-6">--}}
