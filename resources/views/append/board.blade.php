@@ -87,7 +87,7 @@
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
             @else
-                USD{{$b_price * ($i + 1)}}
+                USD {{$b_price * ($i + 1)}}
             @endif
         </div>
 {{--        @if(isset($font_disable) && $font_disable == true)--}}
