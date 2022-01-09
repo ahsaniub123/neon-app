@@ -24,7 +24,7 @@
                         <tr>
                             <th scope="row">{{ ++$i }}</th>
                             <td class="text-capitalize">{{ $picture->title }}</td>
-                            <td class="text-capitalize"><img src="{{asset('assets/images/dashboard/multikart-logo.png')}}" width="40px" height="40px"></td>
+                            <td class="text-capitalize"><img src="{{asset('slider_pictures'.'/'.$picture->picture)}}" width="40px" height="40px"></td>
                             <td class="text-right">
                                 <div class="btn-group btn-group-sm">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -95,7 +95,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input type="text" name="title" class="form-control" required placeholder="Font Face">
+                                    <input type="text" name="title" class="form-control" required placeholder="Picture Title">
                                 </div>
                                 <div class="form-control">
                                     <label>Upload Font File</label>
