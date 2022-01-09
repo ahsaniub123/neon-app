@@ -24,7 +24,7 @@
                         <tr>
                             <th scope="row">{{ ++$i }}</th>
                             <td class="text-capitalize">{{ $picture->title }}</td>
-                            <td class="text-capitalize text-center"><img src="{{asset('slider_pictures'.'/'.$picture->picture)}}" width="70px" height="70px"></td>
+                            <td class="text-capitalize text-center"><img src="{{asset('slider_pictures'.'/'.$picture->picture)}}" width="70px" height="60px"></td>
                             <td class="text-right">
                                 <div class="btn-group btn-group-sm">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
