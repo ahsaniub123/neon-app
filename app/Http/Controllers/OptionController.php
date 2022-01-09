@@ -103,14 +103,19 @@ class OptionController extends Controller
         ]);
         }
         public function PictureSave(Request $request){
-            $picture = new SliderPicture();
-            $picture->title = $request->title;
-            $file = $request->file('url');
-            $input['url'] = $file->getClientOriginalName();
-            $file->move(public_path('slider_pictures'),$file->getClientOriginalName());
-            $picture->picture = $input['url'];
-            $picture->save();
-            return redirect()->back()->with('success', 'Slider Picture Added Successfully');
+            $pictures = SliderPicture::get();
+            if (count($pictures) < 4){
+                $picture = new SliderPicture();
+                $picture->title = $request->title;
+                $file = $request->file('url');
+                $input['url'] = $file->getClientOriginalName();
+                $file->move(public_path('slider_pictures'),$file->getClientOriginalName());
+                $picture->picture = $input['url'];
+                $picture->save();
+                return redirect()->back()->with('success', 'Slider Picture Added Successfully');
+            }else{
+                return redirect()->back()->with('success', 'you can add only four Images');
+            }
         }
         public function PictureUpdate(Request $request,$id){
         $picture = SliderPicture::where('id',$id)->first();
