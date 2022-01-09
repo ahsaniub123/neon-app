@@ -114,7 +114,7 @@ class OptionController extends Controller
                 $picture->save();
                 return redirect()->back()->with('success', 'Slider Picture Added Successfully');
             }else{
-                return redirect()->back()->with('error', 'you can add only four Images');
+                return redirect()->back()->with('error', 'You Can Add Only Four Images');
             }
         }
         public function PictureUpdate(Request $request,$id){
