@@ -22,6 +22,7 @@ class ScriptController extends Controller
     {
         $b_price = $request->b_price;
         $b_length = $request->b_lenght;
+        $b_height = $request->b_height;
         $font= null;
         $text= null;
         if (isset($request->slug)) {
@@ -90,6 +91,7 @@ class ScriptController extends Controller
                 'text' => $text,
                 'b_price'=>$b_price,
                 'b_length'=>$b_length,
+                'b_height'=>$b_height,
             ])->render();
         } else {
             $board = null;
@@ -186,6 +188,7 @@ class ScriptController extends Controller
     {
         $board_price = $request->for_board_price;
         $b_length = $request->for_board_length;
+        $b_height = $request->for_board_height;
         $font = null;
         if (isset($request->slug)) {
             $savedDesign = SaveDesign::where('slug', $request->slug)->first();
@@ -211,6 +214,7 @@ class ScriptController extends Controller
                     'font' => $font,
                     'b_price'=>$board_price,
                     'b_length'=>$b_length,
+                    'b_height'=>$b_height,
                 ])->render();
             } else {
                 $board = '<p>“Too many letters for this font! (Max 50)”</p>';

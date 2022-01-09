@@ -71,14 +71,32 @@
                    }
                }
             }
+            if ($i == 0){
+                $for_multiply = 1;
+            }
+            if ($i == 1){
+                $for_multiply =  1.39;
+            }
+            if ($i == 2){
+                $for_multiply =  1.67;
+            }
+            if ($i == 3){
+                $for_multiply =  2.1;
+            }
+            if ($i == 4){
+                $for_multiply = 2.67;
+            }
+            if ($i == 5){
+                $for_multiply =  4.44;
+            }
     @endphp
 {{--    <p>{{json_encode($total_max_char_height_count)}}</p>--}}
 {{--    <p>{{json_encode($char_count_array)}}</p>--}}
 {{--    <p>{{json_encode($text)}}</p>--}}
     <div @if(isset($font_disable) && $font_disable == true) data-disable="yes" @else data-disable="not" @endif
-        class="board @if($board_width != null && $board_length != null) @if($board_width == $board->width && $board_length == $board->length) active @endif @endif"
-        data-length="{{$total_max_char_length_count}}" data-boardSize="{{$board->title}}" data-width="{{$total_max_char_height_count}}"
-        data-price="{{$b_price * ($i + 1)}}">
+    class="board @if($board_width != null && $board_length != null) @if($board_width == $board->width && $board_length == $board->length) active @endif @endif"
+         data-length="{{$total_max_char_length_count}}" data-boardSize="{{$board->title}}" data-width="{{$total_max_char_height_count}}"
+         data-price="{{$pricing}}">
         <div class="board_price"
              @if(isset($font_disable) && $font_disable == true) style=" width: auto !important;" @else @endif>
             {{ $board->title }}<br>
@@ -86,6 +104,7 @@
                 <div style="display: flex;">
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
+
             @else
                 USD
                 @if($board->title == 'Small') @if($b_price < 102) 102 @else {{$b_price * ($i + 1)}} @endif @endif
@@ -96,18 +115,15 @@
                 @if($board->title == 'Supersized') @if($b_price < 301) 301 @else {{$b_price * ($i + 1)}} @endif @endif
             @endif
         </div>
-{{--        @if(isset($font_disable) && $font_disable == true)--}}
-{{--            <div class="board_dimension" style="display: none !important;">--}}
+        @if(isset($font_disable) && $font_disable == true)
+            <div class="board_dimension" style="display: none !important;">
 
-{{--            </div>--}}
-{{--        @else--}}
-{{--            <div class="board_dimension" style="float: right;">--}}
-{{--                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In--}}
-{{--                Length <br> {{$for_board_length * ($i + 1)}}In </div>--}}
-{{--        @endif--}}
-        <div class="board_dimension" style="float: right;">
-            {{--                Length: {{ round(($total_max_char_length_count / 2.54),2)}}In  <br> Width: {{ round(($total_max_char_height_count / 2.54),2) }}In--}}
-            Length <br> {{$b_length * ($i + 1)}}In </div>
+            </div>
+        @else
+            <div class="board_dimension" style="float: right;">
+                Length: {{$b_length * $for_multiply}}″ <br> Height: {{ $b_height * $for_multiply }}″
+            </div>
+        @endif
     </div>
 @endforeach
 <div class='board-bottom' style="padding: 1%;"><small>*The Height shown is a range. Sizes vary depending on choice of
