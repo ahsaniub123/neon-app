@@ -94,6 +94,12 @@ class OptionController extends Controller
                 'open_box' => $option_price->open_box,
             );
             return response()->json($data);
+        }
+        public function SlidPictures(){
+
+        return view('app.slider-pictures');
+        }
+        public function PictureSave(Request $request){
 
         }
 }

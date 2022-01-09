@@ -35,6 +35,10 @@ Route::group(['middleware' => ['auth.shopify']], function () {
     Route::get('board-options', [\App\Http\Controllers\OptionController::class, 'options_index'])->name('board.options');
     Route::post('board/options/save', [\App\Http\Controllers\OptionController::class, 'board_options_save'])->name('options.save');
 
+    // slider pictures
+    Route::get('slid/pictures', [\App\Http\Controllers\OptionController::class, 'SlidPictures'])->name('slid.pictures');
+    Route::post('picture/save', [\App\Http\Controllers\OptionController::class, 'PictureSave'])->name('picture.save');
+
 //    boards
     Route::get('boards', [\App\Http\Controllers\BoardController::class, 'boards_index'])->name('boards');
     Route::get('/bulk_board_append/{id}', [\App\Http\Controllers\BoardController::class, 'bulk_board_append'])->name('bulk-board-append');

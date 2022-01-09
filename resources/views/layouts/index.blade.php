@@ -33,6 +33,9 @@
             <a class="nav-link text-white" href="{{ route('boards') }}">Boards</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-white" href="{{ route('slid.pictures') }}">Slider Pictures</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-white" href="{{ route('character_diemensions') }}">Character Dimensions</a>
         </li>
         <li class="nav-item">
