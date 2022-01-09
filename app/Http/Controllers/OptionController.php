@@ -123,7 +123,7 @@ class OptionController extends Controller
             return redirect()->back()->with('success', 'Slider Picture Updated Successfully');
         }
         public function PictureDelete($id){
-        $picture = SliderPicture::where('id',$id)->fist();
+        $picture = SliderPicture::where('id',$id)->first();
         $picture->delete();
             return redirect()->back()->with('success', 'Slider Picture Deleted Successfully');
         }
