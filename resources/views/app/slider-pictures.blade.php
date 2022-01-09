@@ -51,7 +51,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <label>Title</label>
-                                                        <input type="text" name="title" class="form-control" required placeholder="Roboto" value="{{ $font->title }}">
+                                                        <input type="text" name="title" class="form-control" required placeholder="Roboto" value="{{ $picture->title }}">
                                                     </div>
                                                     <div class="form-control">
                                                         <label>Upload Font File</label>
