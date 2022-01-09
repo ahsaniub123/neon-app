@@ -103,6 +103,6 @@ class OptionController extends Controller
         ]);
         }
         public function PictureSave(Request $request){
-
+            dd($request->all());
         }
 }
