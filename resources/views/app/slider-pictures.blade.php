@@ -55,7 +55,7 @@
                                                     </div>
                                                     <div class="form-control">
                                                         <label>Upload Font File</label>
-                                                        <input required type="file" name="url" value="{{$picture->$picture}}" class="form-control" >
+                                                        <input required type="file" name="url" value="{{$picture->picture}}" class="form-control" >
                                                     </div>
                                                 </div>
                                             </div>
