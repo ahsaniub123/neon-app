@@ -87,12 +87,13 @@
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
             @else
-                USD @if($board->title == 'Small' && $b_price < 102) 102 @else {{$b_price * ($i + 1)}} @endif
-                @if($board->title == 'Medium' && $b_price < 136) 136 @else {{$b_price * ($i + 1)}} @endif
-                @if($board->title == 'Large' && $b_price < 180) 180 @else {{$b_price * ($i + 1)}} @endif
-                @if($board->title == 'X Large' && $b_price < 223) 223 @else {{$b_price * ($i + 1)}} @endif
-                @if($board->title == 'XX Large' && $b_price < 256) 256 @else {{$b_price * ($i + 1)}} @endif
-                @if($board->title == 'Supersized' && $b_price < 301) 301 @else {{$b_price * ($i + 1)}} @endif
+                USD
+                @if($board->title == 'Small') @if($b_price < 102) 102 @else {{$b_price * ($i + 1)}} @endif @endif
+                @if($board->title == 'Medium') @if($b_price < 136) 136 @else {{$b_price * ($i + 1)}} @endif @endif
+                @if($board->title == 'Large') @if($b_price < 180) 180 @else {{$b_price * ($i + 1)}} @endif @endif
+                @if($board->title == 'X Large') @if($b_price < 223) 223 @else {{$b_price * ($i + 1)}} @endif @endif
+                @if($board->title == 'XX Large') @if($b_price < 256) 256 @else {{$b_price * ($i + 1)}} @endif @endif
+                @if($board->title == 'Supersized') @if($b_price < 301) 301 @else {{$b_price * ($i + 1)}} @endif @endif
             @endif
         </div>
 {{--        @if(isset($font_disable) && $font_disable == true)--}}
