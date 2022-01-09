@@ -121,7 +121,7 @@
             </div>
         @else
             <div class="board_dimension" style="float: right;">
-                Length: {{$b_length * $for_multiply}}″ <br> Height: {{ $b_height * $for_multiply }}″
+                Length: {{round($b_length * $for_multiply, 1)}}″ <br> Height: {{ round($b_height * $for_multiply , 1) }}″
             </div>
         @endif
     </div>
