@@ -73,7 +73,7 @@
                     </tbody>
                 </table>
             @else
-                <p class="text-center"><em>No Board Font Family  Available Please Add New Font Family</em></p>
+                <p class="text-center"><em>No Slider Pictures Added Yet !</em></p>
             @endif
         </div>
     </div>
