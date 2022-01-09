@@ -87,7 +87,12 @@
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
             @else
-                USD {{$b_price * ($i + 1)}}
+                USD @if($board->title == 'Small' && $b_price < 102) 102 @else {{$b_price * ($i + 1)}} @endif
+                @if($board->title == 'Medium' && $b_price < 136) 136 @else {{$b_price * ($i + 1)}} @endif
+                @if($board->title == 'Large' && $b_price < 180) 180 @else {{$b_price * ($i + 1)}} @endif
+                @if($board->title == 'X Large' && $b_price < 223) 223 @else {{$b_price * ($i + 1)}} @endif
+                @if($board->title == 'XX Large' && $b_price < 256) 256 @else {{$b_price * ($i + 1)}} @endif
+                @if($board->title == 'Supersized' && $b_price < 301) 301 @else {{$b_price * ($i + 1)}} @endif
             @endif
         </div>
 {{--        @if(isset($font_disable) && $font_disable == true)--}}
@@ -106,7 +111,6 @@
 @endforeach
 <div class='board-bottom' style="padding: 1%;"><small>*The Height shown is a range. Sizes vary depending on choice of
         font style, and whether the text includes upper & lower case.</small></div>
-
 {{--Small--}}
 {{--Not Available For This Font--}}
 
