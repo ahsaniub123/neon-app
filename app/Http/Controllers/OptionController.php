@@ -112,4 +112,14 @@ class OptionController extends Controller
             $picture->save();
             return redirect()->back()->with('success', 'Slider Picture Added Successfully');
         }
+        public function PictureUpdate(Request $request,$id){
+        $picture = SliderPicture::where('id',$id)->first();
+            $picture->title = $request->title;
+            $file = $request->file('url');
+            $input['url'] = $file->getClientOriginalName();
+            $file->move(public_path('slider_pictures'),$file->getClientOriginalName());
+            $picture->picture = $input['url'];
+            $picture->save();
+            return redirect()->back()->with('success', 'Slider Picture Updated Successfully');
+        }
 }
