@@ -38,6 +38,8 @@ Route::group(['middleware' => ['auth.shopify']], function () {
     // slider pictures
     Route::get('slid/pictures', [\App\Http\Controllers\OptionController::class, 'SlidPictures'])->name('slid.pictures');
     Route::post('picture/save', [\App\Http\Controllers\OptionController::class, 'PictureSave'])->name('picture.save');
+    Route::post('picture/update/{id}', [\App\Http\Controllers\OptionController::class, 'PictureUpdate'])->name('picture.update');
+    Route::post('picture/delete/{id}', [\App\Http\Controllers\OptionController::class, 'PictureDelete'])->name('picture.delete');
 
 //    boards
     Route::get('boards', [\App\Http\Controllers\BoardController::class, 'boards_index'])->name('boards');

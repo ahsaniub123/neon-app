@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FontFamily;
 use App\Models\Option;
+use App\Models\SliderPicture;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -96,8 +97,10 @@ class OptionController extends Controller
             return response()->json($data);
         }
         public function SlidPictures(){
-
-        return view('app.slider-pictures');
+        $pictures = SliderPicture::get();
+        return view('app.slider-pictures')->with([
+            'pictures'=>$pictures,
+        ]);
         }
         public function PictureSave(Request $request){
 
