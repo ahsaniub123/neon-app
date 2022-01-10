@@ -10,6 +10,7 @@ use App\Models\FontFamily;
 use App\Models\Option;
 use App\Models\Pricing;
 use App\Models\SaveDesign;
+use App\Models\SliderPicture;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Osiset\BasicShopifyAPI\BasicShopifyAPI;
@@ -929,5 +930,15 @@ class ScriptController extends Controller
             'slug' => $slug,
         ]);
     }
-
+    public function SliderPictures(){
+        $pictures = SliderPicture::get();
+        $total = count($pictures);
+        $response = view('append.pictures')->with([
+            'pictures'=>$pictures,
+            'total'=>$total,
+        ])->render();
+        return response([
+            'response'=>$response,
+        ]);
+    }
 }

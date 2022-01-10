@@ -85,6 +85,7 @@ Route::any('/board', [\App\Http\Controllers\ScriptController::class, 'availableB
 Route::any('/orders', [\App\Http\Controllers\ScriptController::class, 'order']);
 Route::any('/cartOrders', [\App\Http\Controllers\ScriptController::class, 'cartOrder']);
 Route::any('/saveDesign', [\App\Http\Controllers\ScriptController::class, 'saveDesign']);
+Route::any('slider/pictures', [\App\Http\Controllers\ScriptController::class, 'SliderPictures']);
 
 Route::any('/discount', [\App\Http\Controllers\ScriptController::class, 'discount']);
 Route::any('/options-prices', [\App\Http\Controllers\OptionController::class, 'options_prices']);

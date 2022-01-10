@@ -104,7 +104,7 @@ class OptionController extends Controller
         }
         public function PictureSave(Request $request){
             $pictures = SliderPicture::get();
-            if (count($pictures) < 4){
+            if (count($pictures) < 5){
                 $picture = new SliderPicture();
                 $picture->title = $request->title;
                 $file = $request->file('url');
