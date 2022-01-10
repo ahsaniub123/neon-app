@@ -85,7 +85,7 @@
 @endif
 @if($total == 5 )
     <div class="singlethumb">
-        <img style="height:119px;" id="image1" src="{{asset('slider_pictures'.'/'.$pictures[0]->picture)}}">
+        <img style="height:119px;"  src="{{asset('slider_pictures'.'/'.$pictures[0]->picture)}}">
     </div>
     <div class="singlethumb">
         <img style="height:119px;" src="{{asset('slider_pictures'.'/'.$pictures[1]->picture)}}">
@@ -94,7 +94,7 @@
         <img style="height:119px;" src="{{asset('slider_pictures'.'/'.$pictures[2]->picture)}}">
     </div>
     <div class="singlethumb">
-        <img style="height:119px;" src="{{asset('slider_pictures'.'/'.$pictures[3]->picture)}}">
+        <img style="height:119px;" id="image1" src="{{asset('slider_pictures'.'/'.$pictures[3]->picture)}}">
     </div>
     <div class="singlethumb">
         <img style="height:119px;" src="{{asset('slider_pictures'.'/'.$pictures[4]->picture)}}">
