@@ -107,12 +107,12 @@
 
             @else
                 USD
-                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else {{$b_price * $for_multiply}} @endif @endif @endif
-                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else {{$b_price * $for_multiply}} @endif @endif @endif
-                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else {{$b_price * $for_multiply}} @endif @endif @endif
-                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else {{$b_price * $for_multiply}} @endif @endif @endif
-                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else {{$b_price * $for_multiply}} @endif @endif @endif
-                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else {{$b_price * $for_multiply}} @endif @endif @endif
+                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
             @endif
         </div>
         @if(isset($font_disable) && $font_disable == true)
