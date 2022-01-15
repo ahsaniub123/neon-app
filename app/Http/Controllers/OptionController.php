@@ -49,6 +49,7 @@ class OptionController extends Controller
         }
         public function options_prices(){
             $option_price = Option::first();
+        if (isset($option_price)){
             if($option_price->indoor == null){
                 $option_price->indoor = "0" ;
             }
@@ -95,6 +96,12 @@ class OptionController extends Controller
                 'open_box' => $option_price->open_box,
             );
             return response()->json($data);
+        }else{
+            return response([
+                'success'=>'success',
+            ]);
+        }
+
         }
         public function SlidPictures(){
         $pictures = SliderPicture::get();
