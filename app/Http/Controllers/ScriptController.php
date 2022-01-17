@@ -464,7 +464,7 @@ class ScriptController extends Controller
             if ($request->outdoor == 0) {
                 $doorprice = 'Free';
             } else {
-                $doorprice = '+£' . $request->outdoor;
+                $doorprice = '$' . $request->outdoor;
             }
         } else {
             $doortitle = null;
@@ -563,7 +563,7 @@ class ScriptController extends Controller
                 ],
                 [
                     'name' => 'Board Price',
-                    'value' => '+£' . $request->properties['board_price'],
+                    'value' => '$' . $request->properties['board_price'],
                 ],
             ]
         ]);
