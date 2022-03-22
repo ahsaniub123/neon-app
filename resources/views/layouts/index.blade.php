@@ -21,7 +21,7 @@
 {{--            <a class="nav-link text-white" href="{{ route('board.pricing.all') }}">Pricing</a>--}}
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="{{ route('board.color.all') }}">Colors</a>
+            <a class="nav-link text-white" href="{{ route('board.color.all') }}">Colors12</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="{{ route('board.font.all') }}">Fonts</a>
@@ -77,5 +77,5 @@
 </body>
 
 </html>
-{{--I will develop and customize shopify store, app ,df themes--}}
+{{--I will develop and customize shopify store, app ,themes--}}
 
