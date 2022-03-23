@@ -519,6 +519,7 @@ class ScriptController extends Controller
         array_push($items, [
             "title" => "Custom Neon Sign",
             "price" => $customizationCharges,
+            'requires_shipping' => true,
             "quantity" => 1,
             "properties" => [
                 [
@@ -639,8 +640,6 @@ class ScriptController extends Controller
                 "draft_order" => [
                     "financial_status" => "pending",
                     "line_items" => $items,
-                    'requires_shipping' => true,
-                    'custom' => true,
                     "note" => "https://mycustomled.com/pages/design-custom-led-sign?type=" . $slug
                 ]
             ]   );
