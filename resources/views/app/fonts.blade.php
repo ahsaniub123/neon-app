@@ -6,6 +6,7 @@
         </div>
         <div class="col-6 text-right">
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Font</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Add price number</button>
         </div>
     </div>
     <div class="row mt-2">
@@ -162,6 +163,36 @@
                                             <input type="number" name="size" class="form-control" required placeholder="eg: 32px">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade mt-4" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Board Color</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('board.font.save') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" name="title" class="form-control" required placeholder="Font Face">
                                 </div>
                             </div>
                         </div>
