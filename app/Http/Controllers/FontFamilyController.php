@@ -67,12 +67,12 @@ class FontFamilyController extends Controller
         $fontfamilies = FontFamily::get();
         if (count($fontfamilies) > 0 ){
             foreach ($fontfamilies as $fontfamily){
-                $fontfamily->price_formula = $request->price_formula;
+                $fontfamily->price_number = $request->price_number;
                 $fontfamily->save();
             }
         }else{
             $fontfamily = new FontFamily();
-            $fontfamily->price_formula = $request->price_formula;
+            $fontfamily->price_number = $request->price_number;
             $fontfamily->save();
         }
         return redirect()->back()->with('success', 'Number added Successfully');
