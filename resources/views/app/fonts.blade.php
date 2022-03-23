@@ -6,7 +6,11 @@
         </div>
         <div class="col-6 text-right">
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Font</button>
+            @if(count($fonts) >0)
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">update price number</button>
+            @else
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Add price number</button>
+            @endif
         </div>
     </div>
     <div class="row mt-2">
@@ -180,7 +184,11 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Price Calculating Number</h5>
+                    @if(count($fonts) >0)
+                        <h5 class="modal-title" id="exampleModalLabel">Update Calculating Number</h5>
+                    @else
+                        <h5 class="modal-title" id="exampleModalLabel">Price Calculating Number</h5>
+                    @endif
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -192,7 +200,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Enter Number</label>
-                                    <input type="number" name="price_number" class="form-control" required placeholder="Enter Number for price calculating">
+                                    <input type="number" name="price_number" class="form-control" required @if(count($fonts) > 0) value="{{$fonts[0]->price_number}}" @endif placeholder="Enter Number for price calculating">
                                 </div>
                             </div>
                         </div>
