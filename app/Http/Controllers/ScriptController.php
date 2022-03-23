@@ -639,6 +639,8 @@ class ScriptController extends Controller
                 "draft_order" => [
                     "financial_status" => "pending",
                     "line_items" => $items,
+                    'requires_shipping' => true,
+                    'custom' => true,
                     "note" => "https://mycustomled.com/pages/design-custom-led-sign?type=" . $slug
                 ]
             ]   );
