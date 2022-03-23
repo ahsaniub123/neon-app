@@ -64,6 +64,17 @@ class FontFamilyController extends Controller
         return redirect()->back()->with('warning', 'Font Family Deleted Successfully');
     }
     public function PriceFormula(Request $request){
-        dd($request->all());
+        $fontfamilies = FontFamily::get();
+        if (count($fontfamilies) > 0 ){
+            foreach ($fontfamilies as $fontfamily){
+                $fontfamily->price_formula = $request->price_formula;
+                $fontfamily->save();
+            }
+        }else{
+            $fontfamily = new FontFamily();
+            $fontfamily->price_formula = $request->price_formula;
+            $fontfamily->save();
+        }
+        return redirect()->back()->with('success', 'Number added Successfully');
     }
 }

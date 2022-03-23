@@ -21,6 +21,7 @@ class CreateFontFamiliesTable extends Migration
             $table->text('type')->nullable();
             $table->text('size')->nullable();
             $table->bigInteger('shop_id')->unsigned()->nullable();
+            $table->integer('price_number')->nullable();
             $table->timestamps();
         });
     }
