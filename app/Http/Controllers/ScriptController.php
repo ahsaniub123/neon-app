@@ -937,8 +937,15 @@ class ScriptController extends Controller
             'pictures'=>$pictures,
             'total'=>$total,
         ])->render();
+        $fontfamilies = FontFamily::get();
+        if (count($fontfamilies) > 0){
+            $price_number = $fontfamilies[0]->price_number;
+        }else{
+            $price_number = 9;
+        }
         return response([
             'response'=>$response,
+            'price_number'=>$price_number,
         ]);
     }
 }
