@@ -70,11 +70,12 @@ class FontFamilyController extends Controller
                 $fontfamily->price_number = $request->price_number;
                 $fontfamily->save();
             }
+            return redirect()->back()->with('success', 'Number updated Successfully');
         }else{
             $fontfamily = new FontFamily();
             $fontfamily->price_number = $request->price_number;
             $fontfamily->save();
+            return redirect()->back()->with('success', 'Number added Successfully');
         }
-        return redirect()->back()->with('success', 'Number added Successfully');
     }
 }
