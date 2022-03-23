@@ -180,19 +180,19 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Board Color</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Price Calculating Number</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route('board.font.save') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('price.formula') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>Title</label>
-                                    <input type="text" name="title" class="form-control" required placeholder="Font Face">
+                                    <label>Enter Number</label>
+                                    <input type="number" name="price_number" class="form-control" required placeholder="Enter Number for price calculating">
                                 </div>
                             </div>
                         </div>

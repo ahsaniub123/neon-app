@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth.shopify']], function () {
     Route::any('/board/colors/{id}/delete', [\App\Http\Controllers\ColorController::class, 'delete'])->name('board.color.delete');
 //Font Family Crud
     Route::get('/board/fonts', [\App\Http\Controllers\FontFamilyController::class, 'index'])->name('board.font.all');
+    Route::post('price/formula', [\App\Http\Controllers\FontFamilyController::class, 'PriceFormula'])->name('price.formula');
     Route::post('/board/fonts/save', [\App\Http\Controllers\FontFamilyController::class, 'save'])->name('board.font.save');
     Route::any('/board/fonts/{id}/update', [\App\Http\Controllers\FontFamilyController::class, 'update'])->name('board.font.update');
     Route::any('/board/fonts/{id}/delete', [\App\Http\Controllers\FontFamilyController::class, 'delete'])->name('board.font.delete');

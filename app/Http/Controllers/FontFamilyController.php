@@ -63,5 +63,7 @@ class FontFamilyController extends Controller
         $font->delete();
         return redirect()->back()->with('warning', 'Font Family Deleted Successfully');
     }
+    public function PriceFormula(Request $request){
+        dd($request->all());
+    }
 }
-;
