@@ -187,6 +187,7 @@ class ScriptController extends Controller
 
     public function availableBoard(Request $request)
     {
+        dd($request->all());
         $board_price = $request->for_board_price;
         $b_length = $request->for_board_length;
         $b_height = $request->for_board_height;
