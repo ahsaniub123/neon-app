@@ -16,7 +16,8 @@
     </td>
     <td class="align-middle" >
         <div class="row disable-font-divs">
-            @php $fonts = \App\Models\FontFamily::get(); @endphp
+            @php $fonts = \App\Models\
+FontFamily::get(); @endphp
             @if($fonts->count())
                 @foreach($fonts as $font)
                     <div class="col-md-2" style="padding: 0px !important;">
