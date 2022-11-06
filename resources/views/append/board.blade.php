@@ -188,6 +188,7 @@
                   }
               }
                    $board_price = trim($board_price);
+                   $board_price = round($board_price);
     @endphp
 {{--    <p>{{json_encode($total_max_char_height_count)}}</p>--}}
 {{--    <p>{{json_encode($char_count_array)}}</p>--}}
