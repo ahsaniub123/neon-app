@@ -11,7 +11,6 @@ class BoardSizeController extends Controller
 {
     public function index(BoardSize $boardSize, Request $request)
     {
-//        hello
         $boardQuery = $boardSize->newQuery();
         if ($request->has('type')) {
             if ($request->input('type') != 'all') {

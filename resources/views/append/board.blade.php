@@ -173,13 +173,13 @@
                     <span style="font-size: 14px;line-height: 28px;">Not Available For This Font</span>
                 </div>
             @else
-                USD<span id="board-price2">
-                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else {{round($b_price * $for_multiply)}} @endif @endif @endif
+{{--                USD<span id="board-price2">--}}
+{{--                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
+{{--                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
+{{--                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
+{{--                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
+{{--                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
+{{--                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else {{round($b_price * $for_multiply)}} @endif @endif @endif--}}
             </span>
             @endif
         </div>
