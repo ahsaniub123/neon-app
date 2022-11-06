@@ -536,7 +536,7 @@ class ScriptController extends Controller
                 ],
                 [
                     'name' => 'Wall Size',
-                    'value' => $request->properties['board_size'] . ' (' . $request->properties['length'] . '*' . $request->properties['width'] . ')',
+                    'value' => $request->properties['board_price'] . ' (' . $request->for_board_length . '*' . $request->for_board_height . ')',
                 ],
                 [
                     'name' => 'Tube Color',
@@ -628,19 +628,20 @@ class ScriptController extends Controller
         $saveDesign->text = $request->properties['wall_text'];
         $saveDesign->font = $request->properties['wall_font'];
         $saveDesign->color = $request->properties['wall_color'];
-        $saveDesign->length = $request->properties['length'];
-        $saveDesign->width = $request->properties['width'];
+        $saveDesign->length = $request->for_board_length;
+        $saveDesign->width = $request->for_board_height;
         $saveDesign->shape = $request->properties['Shape'];
         $saveDesign->supply = $request->properties['Supply'];
         $saveDesign->slug = $slug;
         $saveDesign->save();
 //        Place Order on Shopify Store
+
         $response = $this->getShopify('neons-co.myshopify.com')->rest('POST', '/admin/draft_orders.json',
             [
                 "draft_order" => [
                     "financial_status" => "pending",
                     "line_items" => $items,
-                    "note" => "https://mycustomled.com/pages/design-custom-led-sign?type=" . $slug
+                    "note" => "https://www.shopneons.com/pages/customizer?type=" . $slug,
                 ]
             ]   );
         $url = $response['body']->container['draft_order']['invoice_url'];
@@ -920,8 +921,8 @@ class ScriptController extends Controller
         $saveDesign->text = $request->properties['wall_text'];
         $saveDesign->font = $request->properties['wall_font'];
         $saveDesign->color = $request->properties['wall_color'];
-        $saveDesign->length = $request->properties['length'];
-        $saveDesign->width = $request->properties['width'];
+        $saveDesign->length = $request->for_board_length;
+        $saveDesign->width = $request->for_board_height;
         $saveDesign->shape = $request->properties['Shape'];
         $saveDesign->supply = $request->properties['Supply'];
         $saveDesign->slug = $slug;
