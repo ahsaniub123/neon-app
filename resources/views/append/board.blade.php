@@ -189,6 +189,102 @@
 //              }
 //                   $board_price = trim($board_price);
 //                   $board_price = round($board_price);
+    if($board->title == 'Small'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 102){
+               $value = 102;
+            }else{
+                if ($b_length * $for_multiply > 18){
+                    $value = round((($b_price * $for_multiply) * 18) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
+    if($board->title == 'Medium'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 136){
+               $value = 136;
+            }else{
+                if ($b_length * $for_multiply > 25){
+                    $value = round((($b_price * $for_multiply) * 25) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
+    if($board->title == 'Large'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 180){
+               $value = 180;
+            }else{
+                if ($b_length * $for_multiply > 35){
+                    $value = round((($b_price * $for_multiply) * 35) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
+    if($board->title == 'X Large'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 223){
+               $value = 223;
+            }else{
+                if ($b_length * $for_multiply > 47){
+                    $value = round((($b_price * $for_multiply) * 47) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
+    if($board->title == 'XX Large'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 256){
+               $value = 256;
+            }else{
+                if ($b_length * $for_multiply > 60){
+                    $value = round((($b_price * $for_multiply) * 60) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
+    if($board->title == 'Supersized'){
+        if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0){
+            $value = 0;
+        }else{
+            if ($b_price * $for_multiply  < 301){
+               $value = 301;
+            }else{
+                if ($b_length * $for_multiply > 80){
+                    $value = round((($b_price * $for_multiply) * 80) / ($b_length * $for_multiply) );
+                }else{
+                    $value = round($b_price * $for_multiply);
+                }
+            }
+        }
+    $bo_price = trim($value);
+    }
     @endphp
 {{--    <p>{{json_encode($total_max_char_height_count)}}</p>--}}
 {{--    <p>{{json_encode($char_count_array)}}</p>--}}
@@ -196,7 +292,7 @@
     <div @if(isset($font_disable) && $font_disable == true) data-disable="yes" @else data-disable="not" @endif
     class="board @if($board_width != null && $board_length != null) @if($board_width == $board->width && $board_length == $board->length) active @endif @endif"
          data-length="{{$total_max_char_length_count}}" data-boardSize="{{$board->title}}" data-width="{{$total_max_char_height_count}}"
-         data-price="{{$board_price}}">
+         data-price="{{$bo_price}}">
         <div class="board_price"
              @if(isset($font_disable) && $font_disable == true) style=" width: auto !important;" @else @endif>
             {{ $board->title }}<br>
@@ -206,12 +302,12 @@
                 </div>
             @else
                 USD<span id="board-price2">
-                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else {{--@if($b_length * $for_multiply > 18) {{round((($b_price * $for_multiply) * 18) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else {{--@if($b_length * $for_multiply > 25) {{round((($b_price * $for_multiply) * 25) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else {{--@if($b_length * $for_multiply > 35) {{round((($b_price * $for_multiply) * 35) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else {{--@if($b_length * $for_multiply > 47) {{round((($b_price * $for_multiply) * 47) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else {{--@if($b_length * $for_multiply > 60) {{round((($b_price * $for_multiply) * 60) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
-                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else {{--@if($b_length * $for_multiply > 80) {{round((($b_price * $for_multiply) * 80) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif--}} {{round($b_price * $for_multiply)}} @endif @endif @endif
+                @if($board->title == 'Small') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply  < 102) 102 @else @if($b_length * $for_multiply > 18) {{round((($b_price * $for_multiply) * 18) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
+                @if($board->title == 'Medium') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 136) 136 @else @if($b_length * $for_multiply > 25) {{round((($b_price * $for_multiply) * 25) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
+                @if($board->title == 'Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 180) 180 @else @if($b_length * $for_multiply > 35) {{round((($b_price * $for_multiply) * 35) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
+                @if($board->title == 'X Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 223) 223 @else @if($b_length * $for_multiply > 47) {{round((($b_price * $for_multiply) * 47) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
+                @if($board->title == 'XX Large') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 256) 256 @else @if($b_length * $for_multiply > 60) {{round((($b_price * $for_multiply) * 60) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
+                @if($board->title == 'Supersized') @if(round($b_length * $for_multiply, 1) == 0 || round($b_height * $for_multiply , 1) == 0) 0 @else @if($b_price * $for_multiply < 301) 301 @else @if($b_length * $for_multiply > 80) {{round((($b_price * $for_multiply) * 80) / ($b_length * $for_multiply) )}} @else {{round($b_price * $for_multiply)}} @endif {{--{{round($b_price * $for_multiply)}}--}} @endif @endif @endif
             </span>
             @endif
         </div>
@@ -235,4 +331,3 @@
         font style, and whether the text includes upper & lower case.</small></div>
 {{--Small--}}
 {{--Not Available For This Font--}}
-
